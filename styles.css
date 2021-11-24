@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    background-color: cadetblue;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas: 
+                "header header header header"
+                "pres pres pres Hornet"
+                "pres pres pres Hornet"
+                "pres pres pres Hornet"
+                "hist hist hist Hornet"
+                "hist hist hist Hornet"
+                "hist hist hist Hornet"
+                "prox prox prox prox"
+                "prox prox prox prox";
+    column-gap: 10px;
+    row-gap: 10px;        
+}
+
+
+
+
+.container div {
+    background-color: royalblue;
+    border: solid black 1px;
+}
+
+.header {
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+}
+
+/* li {
+    justify-content: end;
+} */
+
+.pres {
+    grid-column: 1 / 4;
+    grid-row: 2 / 5;
+}
+
+.hist {
+    grid-column: 1 / 4;
+    grid-row: 5 / 8;
+}
+
+.Hornet {
+    grid-column: 4 / 5;
+    grid-row: 2 / 8;
+    display: flex;
+    flex-direction: column;
+}
+
+.Hornet img{
+    background-color: transparent;
+    align-items: flex;
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.prox {
+    grid-column: 1 / 5;
+    grid-row: 8 / 10;
+}
+
+
+@media (max-width: 576px) {
+    .container {
+        background-color: green;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-areas: 
+                "header header"
+                "pres pres"
+                "pres pres"
+                "hist hist"
+                "hist hist"
+                "Hornet Hornet"
+                "Hornet Hornet"
+                "prox prox";
+        column-gap: 5px;
+        row-gap: 5px;        
+            }  
+            
+        .header {
+                    grid-column: 1 / 3;
+                    grid-row: 1 /2;
+                }
+            
+        .pres{
+                    grid-column: 1 / 3;
+                    grid-row: 2 / 4;
+                }
+            
+        .hist {
+                    grid-column: 1 / 3;
+                    grid-row: 4 / 6;
+                }
+            
+        
+        .Hornet {
+                    grid-column: 1 / 3;
+                    grid-row: 6 / 8;
+                   
+                }
+            
+            
+        .prox {
+                    grid-column: 1 / 3;
+                    grid-row: 8 / 9;
+                }
+    } 
+    
